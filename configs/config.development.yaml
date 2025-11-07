@@ -1,0 +1,19 @@
+# Development Configuration
+
+server:
+  port: 8080
+  host: localhost
+
+indexer:
+  # Use test data directory in development
+  root_paths:
+    - ./test/testdata/sample_files
+  worker_count: 2
+  auto_index: true
+
+storage:
+  index_path: ./.searchlight/index.json
+
+logging:
+  level: debug
+  format: text

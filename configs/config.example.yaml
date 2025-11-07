@@ -1,0 +1,39 @@
+# SearchLight Configuration Example
+
+# Server configuration
+server:
+  # Port for the HTTP server
+  port: 8080
+  
+  # Host address to bind to (use 0.0.0.0 for all interfaces)
+  host: localhost
+
+# File indexer configuration
+indexer:
+  # Root directories to index
+  root_paths:
+    - ~/Documents
+    - ~/Downloads
+    # Add more paths as needed
+  
+  # Number of concurrent workers for indexing
+  # Higher values = faster indexing but more CPU/memory usage
+  worker_count: 5
+  
+  # Automatically start indexing on startup
+  auto_index: true
+
+# Storage configuration
+storage:
+  # Path where the index will be saved
+  # The directory will be created if it doesn't exist
+  index_path: ~/.searchlight/index.json
+
+# Logging configuration
+logging:
+  # Log level: debug, info, warn, error
+  level: info
+  
+  # Log format: text, json
+  # Use json for production environments
+  format: text
